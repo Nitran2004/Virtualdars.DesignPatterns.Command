@@ -6,7 +6,7 @@ namespace Virtualdars.DesignPatterns.Command
 {
 
     /// <summary>
-    /// Invoker
+
     /// </summary>
     public class Kiosk
     {
@@ -40,7 +40,7 @@ namespace Virtualdars.DesignPatterns.Command
     }
 
     /// <summary>
-    /// Receiver
+
     /// </summary>
     public class FoodOrder
     {
@@ -58,7 +58,7 @@ namespace Virtualdars.DesignPatterns.Command
         public void ShowCurrentItems()
         {
             double totalPrice = 0;
-            Console.WriteLine("Buyurtma:");
+            Console.WriteLine("Pedido:");
             for (int i = 0; i < currentItems.Count; i++)
             {
                 totalPrice += currentItems[i].Meal.Price * currentItems[i].Count;
@@ -72,7 +72,7 @@ namespace Virtualdars.DesignPatterns.Command
     }
 
     /// <summary>
-    /// Restoranda buyurtma beriladigan taom
+
     /// </summary>
     public class MenuItem
     {
@@ -138,7 +138,7 @@ namespace Virtualdars.DesignPatterns.Command
         public override void Execute(List<MenuItem> orderItems, MenuItem newItem)
         {
             if (newItem.Count <= 0)
-                throw new Exception("Buyurtma miqdori kamida 1ta bo'lishi kerak.");
+                throw new Exception("La cantidad del pedido debe ser al menos 1");
 
             orderItems.Add(newItem);
         }

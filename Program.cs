@@ -11,7 +11,7 @@
             selfOrderingMachine.PlaceOrderItem(MealType.Nugget, 2);
             selfOrderingMachine.PlaceOrderItem(MealType.Chicken, 2);
 
-            // Nuggets ni hohlamay qoldik, uni buyurtmadan olib tashlaymiz:
+            
             selfOrderingMachine.RemoveOrderItem(MealType.Nugget);
             selfOrderingMachine.SubmitOrder();
 
