@@ -96,9 +96,13 @@ namespace Virtualdars.DesignPatterns.Command
 
     public class Meal
     {
+        // Constructor de la clase Meal que toma un parámetro MealType
         public Meal(MealType type)
         {
+            // Establece el tipo de comida
             Type = type;
+
+            // Utiliza un switch para asignar un precio en función del tipo de comida
             switch (type)
             {
                 case MealType.Burger:
@@ -114,13 +118,19 @@ namespace Virtualdars.DesignPatterns.Command
                     Price = 8.49;
                     break;
                 default:
+                    // Si el tipo de comida no coincide con ninguno de los casos anteriores, asigna un precio predeterminado
                     Price = 4.49;
                     break;
             }
         }
+
+        // Propiedad que obtiene o establece el tipo de comida
         public MealType Type { get; set; }
+
+        // Propiedad de solo lectura que obtiene el precio de la comida
         public double Price { get; init; }
     }
+
 
     /// <summary>
     /// Command Abstract Class
